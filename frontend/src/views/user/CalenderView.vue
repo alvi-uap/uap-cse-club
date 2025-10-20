@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
     <!-- Main Content -->
     <div class="container mx-auto px-4 py-8">
@@ -13,34 +13,34 @@
             <div class="flex items-center space-x-4">
               <!-- View Toggle -->
               <div class="flex bg-gray-100 rounded-lg p-1">
-                <button 
+                <button
                   @click="currentView = 'month'"
                   :class="[
                     'px-4 py-2 rounded-md text-sm font-medium transition-all duration-300',
-                    currentView === 'month' 
-                      ? 'bg-white text-blue-600 shadow-sm' 
+                    currentView === 'month'
+                      ? 'bg-white text-blue-600 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
                   ]"
                 >
                   Month
                 </button>
-                <button 
+                <button
                   @click="currentView = 'week'"
                   :class="[
                     'px-4 py-2 rounded-md text-sm font-medium transition-all duration-300',
-                    currentView === 'week' 
-                      ? 'bg-white text-blue-600 shadow-sm' 
+                    currentView === 'week'
+                      ? 'bg-white text-blue-600 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
                   ]"
                 >
                   Week
                 </button>
-                <button 
+                <button
                   @click="currentView = 'day'"
                   :class="[
                     'px-4 py-2 rounded-md text-sm font-medium transition-all duration-300',
-                    currentView === 'day' 
-                      ? 'bg-white text-blue-600 shadow-sm' 
+                    currentView === 'day'
+                      ? 'bg-white text-blue-600 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
                   ]"
                 >
@@ -66,7 +66,7 @@
               </div>
 
               <!-- Add Event Button -->
-              <button 
+              <button
                 @click="showAddEventModal = true"
                 class="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold flex items-center space-x-2"
               >
@@ -93,8 +93,8 @@
         <div v-if="currentView === 'month'" class="p-6">
           <!-- Week Days Header -->
           <div class="grid grid-cols-7 gap-1 mb-4">
-            <div 
-              v-for="day in weekDays" 
+            <div
+              v-for="day in weekDays"
               :key="day"
               class="p-4 text-center text-sm font-semibold text-gray-600 uppercase tracking-wider"
             >
@@ -104,8 +104,8 @@
 
           <!-- Calendar Grid -->
           <div class="grid grid-cols-7 gap-1">
-            <div 
-              v-for="day in calendarDays" 
+            <div
+              v-for="day in calendarDays"
               :key="day.date.toString()"
               :class="[
                 'min-h-32 p-2 border border-gray-100 transition-colors hover:bg-gray-50',
@@ -115,7 +115,7 @@
             >
               <!-- Date Number -->
               <div class="flex justify-between items-start mb-2">
-                <span 
+                <span
                   :class="[
                     'text-sm font-medium px-2 py-1 rounded-full',
                     day.isToday ? 'bg-blue-600 text-white' : 'text-gray-900'
@@ -123,7 +123,7 @@
                 >
                   {{ day.date.getDate() }}
                 </span>
-                <button 
+                <button
                   @click="openAddEventModal(day.date)"
                   class="opacity-0 hover:opacity-100 p-1 hover:bg-gray-200 rounded transition-all duration-300"
                 >
@@ -135,8 +135,8 @@
 
               <!-- Events -->
               <div class="space-y-1">
-                <div 
-                  v-for="event in getEventsForDay(day.date)" 
+                <div
+                  v-for="event in getEventsForDay(day.date)"
                   :key="event.id"
                   @click="openEventDetails(event)"
                   :class="[
@@ -157,10 +157,10 @@
           <div class="grid grid-cols-8 gap-1">
             <!-- Time Column -->
             <div class="p-4"></div>
-            
+
             <!-- Day Headers -->
-            <div 
-              v-for="day in currentWeek" 
+            <div
+              v-for="day in currentWeek"
               :key="day.date.toString()"
               :class="[
                 'p-4 text-center border-b',
@@ -170,7 +170,7 @@
               <div class="text-sm font-semibold text-gray-600 uppercase">
                 {{ formatDate(day.date, 'EEE') }}
               </div>
-              <div 
+              <div
                 :class="[
                   'text-2xl font-black',
                   isToday(day.date) ? 'text-blue-600' : 'text-gray-900'
@@ -186,16 +186,16 @@
             <div class="p-2 text-right text-sm text-gray-500 border-r border-gray-200">
               {{ formatHour(hour) }}
             </div>
-            
-            <div 
-              v-for="day in currentWeek" 
+
+            <div
+              v-for="day in currentWeek"
               :key="day.date.toString() + hour"
               class="min-h-20 border-b border-r border-gray-200 relative"
               @click="openAddEventModal(new Date(day.date.getFullYear(), day.date.getMonth(), day.date.getDate(), hour))"
             >
               <!-- Events for this time slot -->
-              <div 
-                v-for="event in getEventsForDayAndHour(day.date, hour)" 
+              <div
+                v-for="event in getEventsForDayAndHour(day.date, hour)"
                 :key="event.id"
                 @click.stop="openEventDetails(event)"
                 :class="[
@@ -223,22 +223,22 @@
           </div>
 
           <div class="grid grid-cols-1 gap-1 max-w-2xl mx-auto">
-            <div 
-              v-for="hour in hours" 
+            <div
+              v-for="hour in hours"
               :key="hour"
               class="flex border-b border-gray-200 min-h-20"
             >
               <div class="w-20 p-2 text-right text-sm text-gray-500 border-r border-gray-200">
                 {{ formatHour(hour) }}
               </div>
-              
-              <div 
+
+              <div
                 class="flex-1 p-2 relative"
                 @click="openAddEventModal(new Date(currentDay.getFullYear(), currentDay.getMonth(), currentDay.getDate(), hour))"
               >
                 <!-- Events for this time slot -->
-                <div 
-                  v-for="event in getEventsForDayAndHour(currentDay, hour)" 
+                <div
+                  v-for="event in getEventsForDayAndHour(currentDay, hour)"
                   :key="event.id"
                   @click.stop="openEventDetails(event)"
                   :class="[
@@ -313,8 +313,8 @@
         <div class="bg-white rounded-2xl shadow-lg border border-blue-50 p-6">
           <h3 class="text-xl font-black text-gray-900 mb-6">Upcoming Events</h3>
           <div class="space-y-4">
-            <div 
-              v-for="event in upcomingEvents.slice(0, 5)" 
+            <div
+              v-for="event in upcomingEvents.slice(0, 5)"
               :key="event.id"
               @click="openEventDetails(event)"
               class="p-4 rounded-lg border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-300 cursor-pointer"
@@ -351,9 +351,9 @@
         <form @submit.prevent="saveEvent" class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Event Title</label>
-            <input 
+            <input
               v-model="newEvent.title"
-              type="text" 
+              type="text"
               required
               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter event title"
@@ -363,18 +363,18 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Start Time</label>
-              <input 
+              <input
                 v-model="newEvent.startTime"
-                type="datetime-local" 
+                type="datetime-local"
                 required
                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">End Time</label>
-              <input 
+              <input
                 v-model="newEvent.endTime"
-                type="datetime-local" 
+                type="datetime-local"
                 required
                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
@@ -383,9 +383,9 @@
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
-            <input 
+            <input
               v-model="newEvent.location"
-              type="text" 
+              type="text"
               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Event location"
             >
@@ -393,7 +393,7 @@
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Event Type</label>
-            <select 
+            <select
               v-model="newEvent.type"
               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -407,7 +407,7 @@
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Description</label>
-            <textarea 
+            <textarea
               v-model="newEvent.description"
               rows="3"
               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -507,27 +507,27 @@ const selectedEvent = ref(null)
 const events = ref([
   {
     id: 1,
-    title: 'Ai Events',
-    startTime: new Date(2025, 11, 20, 14, 0), 
-    endTime: new Date(2025, 11, 20, 16, 0),
-    location: 'CSE Lab 301',
-    type: 'workshop',
-    description: 'Learn modern web development techniques including React, Vue, and modern CSS frameworks.'
+    title: 'Cultural Club Fest',
+    startTime: new Date(2025, 10, 10, 14, 0),
+    endTime: new Date(2025, 10, 10, 16, 0),
+    location: 'Uap Auditorium',
+    type: 'Cultural Fest',
+    description: 'Celebrate creativity and unity at the UAP CSE Cultural Fest — where talent, tradition, and technology come together in one vibrant celebration!'
   },
   {
     id: 2,
-    title: 'Club Monthly Meeting',
-    startTime: new Date(2025, 11, 20, 14, 0), 
-    endTime: new Date(2025, 11, 20, 16, 0),
-    location: 'Conference Room A',
-    type: 'meeting',
-    description: 'Monthly club meeting to discuss upcoming events and projects.'
+    title: 'CyberShield 2025',
+    startTime: new Date(2025, 9, 28, 14, 0),
+    endTime: new Date(2025, 9, 28, 16, 0),
+    location: 'Programing lab 2',
+    type: 'Contest',
+    description: 'CyberShield 2025 — Defend. Detect. Secure the Future.'
   },
   {
     id: 3,
     title: 'Hackathon Kickoff',
-    startTime: new Date(2025, 11, 20, 14, 0), 
-    endTime: new Date(2025, 11, 20, 16, 0),
+    startTime: new Date(2025, 10, 14, 14, 0),
+    endTime: new Date(2025, 10, 14, 16, 0),
     location: 'Innovation Hub',
     type: 'competition',
     description: 'Annual coding competition kickoff event with project ideas and team formation.'
@@ -535,19 +535,31 @@ const events = ref([
   {
     id: 4,
     title: 'AI & ML Seminar',
-    startTime: new Date(2025, 11, 20, 14, 0), 
-    endTime: new Date(2025, 11, 20, 16, 0),
-    location: 'Auditorium B',
+    startTime: new Date(2025, 9, 14, 14, 0),
+    endTime: new Date(2025, 9, 14, 16, 0),
+    location: 'Uap Auditorium',
     type: 'workshop',
     description: 'Introduction to Artificial Intelligence and Machine Learning concepts.'
   },
+<<<<<<< HEAD
 
+=======
+  {
+    id: 5,
+    title: 'Project Submission Deadline',
+    startTime: new Date(2025, 10, 5, 14, 0),
+    endTime: new Date(2025, 10, 5, 16, 0),
+    location: 'Online',
+    type: 'deadline',
+    description: 'Final submission deadline for semester projects.'
+  },
+>>>>>>> ed3f94b (Fixeing  calender)
   {
     id: 6,
-    title: 'Tech Social Event',
+    title: 'TechFusion',
     startTime: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 5, 17, 0),
     endTime: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 5, 19, 0),
-    location: 'Student Lounge',
+    location: 'Uap Plaza',
     type: 'social',
     description: 'Networking event for tech enthusiasts with pizza and drinks.'
   }
