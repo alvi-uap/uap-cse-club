@@ -86,30 +86,8 @@
         </div>
       </section>
 
-      <!-- Leadership Section -->
-      <section class="bg-white rounded-2xl shadow-xl p-8 mb-16 border border-purple-100">
-        <h2 class="text-3xl font-black text-gray-900 mb-12 text-center">University Leadership</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center group">
-            <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full mx-auto mb-6 shadow-lg group-hover:scale-105 transition-transform duration-300"></div>
-            <h3 class="text-xl font-black text-gray-900 mb-2">Dr. Sarah Chen</h3>
-            <p class="text-purple-600 font-semibold mb-3">Vice Chancellor</p>
-            <p class="text-gray-600 text-sm">Leading UAP towards academic excellence and global recognition</p>
-          </div>
-          <div class="text-center group">
-            <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-purple-500 rounded-full mx-auto mb-6 shadow-lg group-hover:scale-105 transition-transform duration-300"></div>
-            <h3 class="text-xl font-black text-gray-900 mb-2">Prof. Michael Rodriguez</h3>
-            <p class="text-purple-600 font-semibold mb-3">Dean of CSE</p>
-            <p class="text-gray-600 text-sm">Pioneering innovation in Computer Science education</p>
-          </div>
-          <div class="text-center group">
-            <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mx-auto mb-6 shadow-lg group-hover:scale-105 transition-transform duration-300"></div>
-            <h3 class="text-xl font-black text-gray-900 mb-2">Dr. Aisha Khan</h3>
-            <p class="text-purple-600 font-semibold mb-3">Director of Research</p>
-            <p class="text-gray-600 text-sm">Driving cutting-edge research initiatives</p>
-          </div>
-        </div>
-      </section>
+
+
 
       <!-- Campus Facilities -->
       <section class="mb-16">
