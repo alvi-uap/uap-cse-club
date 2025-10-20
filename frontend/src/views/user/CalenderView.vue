@@ -541,15 +541,7 @@ const events = ref([
     type: 'workshop',
     description: 'Introduction to Artificial Intelligence and Machine Learning concepts.'
   },
-  {
-    id: 5,
-    title: 'Project Submission Deadline',
-    startTime: new Date(2025, 11, 20, 14, 0), 
-    endTime: new Date(2025, 11, 20, 16, 0),
-    location: 'Online',
-    type: 'deadline',
-    description: 'Final submission deadline for semester projects.'
-  },
+
   {
     id: 6,
     title: 'Tech Social Event',
