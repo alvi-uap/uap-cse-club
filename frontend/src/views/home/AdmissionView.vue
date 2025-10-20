@@ -299,67 +299,7 @@
       </div>
     </section>
 
-    <!-- Important Dates -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Important Dates & Deadlines</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mark your calendar with these key admission dates to ensure you don't miss any deadlines.
-          </p>
-        </div>
 
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-gray-50 rounded-2xl p-8">
-            <div class="space-y-6">
-              <div class="flex items-center justify-between py-4 border-b border-gray-200">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Fall 2024 Application Opens</h3>
-                  <p class="text-gray-600">Start submitting your applications</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">August 1, 2024</div>
-                  <div class="text-gray-500">Priority Deadline</div>
-                </div>
-              </div>
-
-              <div class="flex items-center justify-between py-4 border-b border-gray-200">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Scholarship Application Deadline</h3>
-                  <p class="text-gray-600">Last day to apply for merit-based scholarships</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">January 15, 2025</div>
-                  <div class="text-gray-500">Final Deadline</div>
-                </div>
-              </div>
-
-              <div class="flex items-center justify-between py-4 border-b border-gray-200">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Regular Decision Deadline</h3>
-                  <p class="text-gray-600">Final deadline for Fall 2024 applications</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">March 1, 2025</div>
-                  <div class="text-gray-500">Regular Deadline</div>
-                </div>
-              </div>
-
-              <div class="flex items-center justify-between py-4">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Orientation Week</h3>
-                  <p class="text-gray-600">Welcome events for new students</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">August 20, 2025</div>
-                  <div class="text-gray-500">Mandatory for all new students</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
