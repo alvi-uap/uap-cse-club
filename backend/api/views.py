@@ -91,7 +91,6 @@ class ExecutivesViewSet(viewsets.ModelViewSet):
 class EventsViewSet(viewsets.ModelViewSet):
     queryset = Events.objects.all()
     serializer_class = EventsSerializer
-<<<<<<< HEAD
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
