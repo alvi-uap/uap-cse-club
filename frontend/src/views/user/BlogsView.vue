@@ -420,7 +420,7 @@ const creatingPost = ref(false);
 const sortBy = ref('name');
 const searchQuery = ref('');
 const showAddModal = ref(false);
-const selectedImage = ref(null); // For image preview modal
+const selectedImage = ref(null); // For image preview modal update
 const newPost = ref({
   name: '',
   description: '',
