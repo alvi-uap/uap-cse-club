@@ -15,6 +15,8 @@ router.register(r'vice-presidents', VisePresidentViewSet)
 router.register(r'general-secretaries', GeneralSecretaryViewSet)
 router.register(r'treasurers', TreasurerViewSet)
 router.register(r'executives', ExecutivesViewSet)
+
+
 router.register(r'events', EventsViewSet)
 
 app_name = "api"
