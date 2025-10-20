@@ -23,12 +23,7 @@ class UserProfileUpdateSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-class EmailFormatValidator:
-    def __call__(self, value):
-        pattern = r'^[a-zA-Z0-9._%+-]+@uap-bd\.edu$'
-        if not re.match(pattern, value):
-            raise serializers.ValidationError('Email must be in the format: username@uap-bd.edu')
-        return value
+
 
 class BaseMemberSerializer(serializers.ModelSerializer):
     mail = serializers.EmailField(validators=[EmailFormatValidator()])
