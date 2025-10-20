@@ -51,7 +51,7 @@ class ClubViewSet(viewsets.ModelViewSet):
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
-    serializer_class = Post
+    serializer_class = PostSerializer
     permission_classes = [IsAuthenticated] 
  
 class ConvenerViewSet(viewsets.ModelViewSet):
