@@ -57,7 +57,7 @@ class PostViewSet(viewsets.ModelViewSet):
 class ConvenerViewSet(viewsets.ModelViewSet):
     queryset = Convener.objects.all()
     serializer_class = ConvenerSerializer
-
+permission_classes = [IsAuthenticated]
 
 class PresidentViewSet(viewsets.ModelViewSet):
     queryset = President.objects.all()
