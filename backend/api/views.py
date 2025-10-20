@@ -57,7 +57,11 @@ class PostViewSet(viewsets.ModelViewSet):
 class ConvenerViewSet(viewsets.ModelViewSet):
     queryset = Convener.objects.all()
     serializer_class = ConvenerSerializer
+<<<<<<< HEAD
     permission_classes = [IsAuthenticated]
+=======
+permission_classes = [IsAuthenticated]
+>>>>>>> 4cc67cbff6f825d6632a50a5b8e242278da26cd0
 
 class PresidentViewSet(viewsets.ModelViewSet):
     queryset = President.objects.all()
@@ -87,6 +91,7 @@ class ExecutivesViewSet(viewsets.ModelViewSet):
 class EventsViewSet(viewsets.ModelViewSet):
     queryset = Events.objects.all()
     serializer_class = EventsSerializer
+<<<<<<< HEAD
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
@@ -97,3 +102,6 @@ class EventsViewSet(viewsets.ModelViewSet):
         if self.request.user.is_superuser:
             return UserProfile.objects.all()
         return UserProfile.objects.filter(user=self.request.user)
+=======
+    permission_classes = [IsAuthenticated]
+>>>>>>> 4cc67cbff6f825d6632a50a5b8e242278da26cd0
