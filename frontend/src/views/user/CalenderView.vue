@@ -508,59 +508,55 @@ const events = ref([
   {
     id: 1,
     title: 'Cultural Club Fest',
-    startTime: new Date(2025, 10, 10, 14, 0),
-    endTime: new Date(2025, 10, 10, 16, 0),
+    startTime: new Date(2025, 10, 10, 17, 0),
+    endTime: new Date(2025, 10, 10, 20, 0),
     location: 'Uap Auditorium',
-    type: 'Cultural Fest',
+    type: 'Cse Cultural Club',
     description: 'Celebrate creativity and unity at the UAP CSE Cultural Fest — where talent, tradition, and technology come together in one vibrant celebration!'
   },
   {
     id: 2,
     title: 'CyberShield 2025',
-    startTime: new Date(2025, 9, 28, 14, 0),
+    startTime: new Date(2025, 9, 28, 11, 0),
     endTime: new Date(2025, 9, 28, 16, 0),
     location: 'Programing lab 2',
-    type: 'Contest',
+    type: 'Cyber Security Club',
     description: 'CyberShield 2025 — Defend. Detect. Secure the Future.'
   },
   {
     id: 3,
     title: 'Hackathon Kickoff',
-    startTime: new Date(2025, 10, 14, 14, 0),
-    endTime: new Date(2025, 10, 14, 16, 0),
-    location: 'Innovation Hub',
-    type: 'competition',
-    description: 'Annual coding competition kickoff event with project ideas and team formation.'
+    startTime: new Date(2025, 10, 14, 10, 0),
+    endTime: new Date(2025, 10, 14, 20, 0),
+    location: 'Robotics Lab',
+    type: 'Robotics Club',
+    description: 'RoboRush 2025 – Hackathon Kickoff marks the beginning of an exciting robotics innovation challenge organized by the UAP Robotics Club. Teams will brainstorm, form ideas, and start building intelligent robots that solve real-world problems. Join the kickoff to connect, create, and compete in the ultimate robotics experience!'
   },
   {
     id: 4,
     title: 'AI & ML Seminar',
-    startTime: new Date(2025, 9, 14, 14, 0),
-    endTime: new Date(2025, 9, 14, 16, 0),
+    startTime: new Date(2025, 9, 14, 16, 0),
+    endTime: new Date(2025, 9, 14, 17, 0),
     location: 'Uap Auditorium',
     type: 'workshop',
     description: 'Introduction to Artificial Intelligence and Machine Learning concepts.'
   },
-<<<<<<< HEAD
-
-=======
   {
     id: 5,
-    title: 'Project Submission Deadline',
-    startTime: new Date(2025, 10, 5, 14, 0),
-    endTime: new Date(2025, 10, 5, 16, 0),
-    location: 'Online',
-    type: 'deadline',
+    title: 'Career Compass 2025 – Navigate Your Future',
+    startTime: new Date(2025, 10, 5, 12, 0),
+    endTime: new Date(2025, 10, 5, 17, 0),
+    location: 'UAP Plaza',
+    type: 'Career Development Club',
     description: 'Final submission deadline for semester projects.'
   },
->>>>>>> ed3f94b (Fixeing  calender)
   {
     id: 6,
     title: 'TechFusion',
     startTime: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 5, 17, 0),
     endTime: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 5, 19, 0),
     location: 'Uap Plaza',
-    type: 'social',
+    type: 'Software & Hardware club',
     description: 'Networking event for tech enthusiasts with pizza and drinks.'
   }
 ])
