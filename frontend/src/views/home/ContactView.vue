@@ -159,7 +159,7 @@
             </div>
 
             <!-- Campus Location -->
-            <div class="bg-white rounded-2xl shadow-lg p-8">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Visit Our Campus</h3>
               <div class="space-y-4">
                 <div class="flex items-start">
@@ -168,9 +168,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div>
-                    <p class="text-gray-700">123 Education Lane</p>
-                    <p class="text-gray-700">Academic City, AC 12345</p>
-                    <p class="text-gray-700">United States</p>
+                    <p class="text-gray-700">74/A, Green Road, Farmgate</p>
+                    <p class="text-gray-700">Dhaka-1205</p>
+                    <p class="text-gray-700">Bangladesh</p>
                   </div>
                 </div>
                 <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-semibold mt-4">
