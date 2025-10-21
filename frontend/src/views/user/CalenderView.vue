@@ -791,3 +791,4 @@ const registerForEvent = (event) => {
   opacity: 1;
 }
 </style>
+
