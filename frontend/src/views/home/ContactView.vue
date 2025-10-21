@@ -283,37 +283,7 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-          <p class="text-xl text-gray-600">Quick answers to common questions</p>
-        </div>
 
-        <div class="space-y-6">
-          <div class="bg-white rounded-2xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">How do I apply for admission?</h3>
-            <p class="text-gray-600">You can apply through our online application portal. Create an account, fill out the application form, upload required documents, and pay the application fee. The entire process takes about 30-45 minutes.</p>
-          </div>
-
-          <div class="bg-white rounded-2xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">What are the application deadlines?</h3>
-            <p class="text-gray-600">For Fall 2024, the priority deadline is January 15th and the regular decision deadline is March 1st. Early decision applications are due November 1st.</p>
-          </div>
-
-          <div class="bg-white rounded-2xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Do you offer campus tours?</h3>
-            <p class="text-gray-600">Yes! We offer guided campus tours Monday through Saturday. You can schedule a tour online or by calling our admissions office. Virtual tours are also available.</p>
-          </div>
-
-          <div class="bg-white rounded-2xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">What financial aid options are available?</h3>
-            <p class="text-gray-600">We offer merit-based scholarships, need-based grants, work-study programs, and federal student loans. Over 85% of our students receive some form of financial assistance.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
