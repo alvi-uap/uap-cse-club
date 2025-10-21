@@ -61,7 +61,7 @@
 
 
 
-   <!-- Contact Form & Info -->
+    <!-- Contact Form & Info -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12">
@@ -111,9 +111,10 @@
                 <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200">
                   <option value="">Select a program (optional)</option>
                   <option value="cs">Computer Science</option>
-                  <option value="engineering">Engineering</option><option value="business">Business Administration</option>
-                  <option value="arts">Arts & Sciences</option>
 
+                  <option value="business">Business Administration</option>
+                  <option value="arts">Arts & Sciences</option>
+                  <option value="medicine">Medicine</option>
                   <option value="law">Law</option>
                 </select>
               </div>
@@ -137,8 +138,8 @@
           </div>
 
 
-   <!-- Contact Information -->
-          <div class="space-y-8">
+          <!-- Contact Information -->
+           <div class="space-y-8">
             <!-- Office Hours -->
             <div class="bg-white rounded-2xl shadow-lg p-8">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Office Hours</h3>
@@ -157,8 +158,9 @@
                 </div>
               </div>
             </div>
+
             <!-- Campus Location -->
-          <div class="bg-white rounded-2xl shadow-lg p-8">
+           <div class="bg-white rounded-2xl shadow-lg p-8">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Visit Our Campus</h3>
               <div class="space-y-4">
                 <div class="flex items-start">
@@ -189,6 +191,7 @@
         </div>
       </div>
     </section>
+
 
 
     <!-- FAQ Section -->
@@ -222,7 +225,6 @@
         </div>
       </div>
     </section>
-
 
 
   </div>
