@@ -1626,6 +1626,8 @@ const handleKeydown = (event) => {
 const fetchPosts = async () => {
 
 
+
+
   try {
     loading.value = true;
 
@@ -1698,7 +1700,6 @@ const filteredPosts = computed(() => {
   } else if (sortBy.value === 'newest') {
 
     result.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
-
 
   }
 
