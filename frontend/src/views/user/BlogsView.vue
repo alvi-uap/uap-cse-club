@@ -851,60 +851,6 @@ const resetFilters = () => {
               />
 
               <p class="mt-1 text-xs text-gray-500">Upload an image for this post</p>
-            </div>
-
-
-
-
-          </div>
-
-          <div class="mt-6 flex justify-end space-x-3">
-
-            <button
-
-              type="button"
-              @click="showAddModal = false"
-
-              class="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
-
-            >
-
-
-              Cancel
-            </button>
-            <button
-
-
-
-
-
-              type="submit"
-
-              :disabled="creatingPost"
-              class="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:bg-purple-400"
-
-            >
-
-
-
-
-
-              {{ creatingPost ? 'Creating...' : 'Create Post' }}
-
-            </button>
-
-          </div>
-
-        </form>
-
-
-
-
-
-      </div>
-
-    </div>
-
 
 
 
