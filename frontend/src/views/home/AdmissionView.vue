@@ -142,7 +142,7 @@
                 <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                Mechanical Engineering
+                Civil Engineering
               </li>
             </ul>
           </div>
@@ -190,13 +190,13 @@
                 <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                Psychology
+                Law
               </li>
               <li class="flex items-center">
                 <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                Biology
+                Pharmacy
               </li>
               <li class="flex items-center">
                 <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -250,10 +250,10 @@
                 <option value="">Select a program</option>
                 <option value="cs">Computer Science</option>
                 <option value="ee">Electrical Engineering</option>
-                <option value="me">Mechanical Engineering</option>
+                <option value="me">Civil Engineering</option>
                 <option value="ba">Business Administration</option>
-                <option value="psy">Psychology</option>
-                <option value="bio">Biology</option>
+                <option value="psy">Pharmacy</option>
+                <option value="bio">Law</option>
               </select>
             </div>
 
@@ -262,11 +262,10 @@
                 <label class="block text-sm font-medium text-gray-700 mb-2">Highest Education</label>
                 <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200">
                   <option value="">Select education level</option>
-                  <option value="highschool">High School</option>
-                  <option value="associate">Associate Degree</option>
+
                   <option value="bachelor">Bachelor's Degree</option>
                   <option value="master">Master's Degree</option>
-                  <option value="phd">PhD</option>
+
                 </select>
               </div>
               <div>
@@ -300,67 +299,7 @@
       </div>
     </section>
 
-    <!-- Important Dates -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Important Dates & Deadlines</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mark your calendar with these key admission dates to ensure you don't miss any deadlines.
-          </p>
-        </div>
 
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-gray-50 rounded-2xl p-8">
-            <div class="space-y-6">
-              <div class="flex items-center justify-between py-4 border-b border-gray-200">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Fall 2024 Application Opens</h3>
-                  <p class="text-gray-600">Start submitting your applications</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">August 1, 2024</div>
-                  <div class="text-gray-500">Priority Deadline</div>
-                </div>
-              </div>
-
-              <div class="flex items-center justify-between py-4 border-b border-gray-200">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Scholarship Application Deadline</h3>
-                  <p class="text-gray-600">Last day to apply for merit-based scholarships</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">January 15, 2025</div>
-                  <div class="text-gray-500">Final Deadline</div>
-                </div>
-              </div>
-
-              <div class="flex items-center justify-between py-4 border-b border-gray-200">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Regular Decision Deadline</h3>
-                  <p class="text-gray-600">Final deadline for Fall 2024 applications</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">March 1, 2025</div>
-                  <div class="text-gray-500">Regular Deadline</div>
-                </div>
-              </div>
-
-              <div class="flex items-center justify-between py-4">
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900">Orientation Week</h3>
-                  <p class="text-gray-600">Welcome events for new students</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-purple-600">August 20, 2025</div>
-                  <div class="text-gray-500">Mandatory for all new students</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 

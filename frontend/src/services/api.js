@@ -11,7 +11,7 @@ const fetchData = (async (url = '', method = 'GET', authenticated = false, data 
     })
     const body = await response.text();
     if (!response.ok) throw `${response.status}: ${body}`;
-    if (method !== 'DELETE' && body === '') return body //throw new Error('Empty response from server');
+    if (method !== 'DELETE' && body === '') return body
     return JSON.parse(body);
 })
 export default fetchData

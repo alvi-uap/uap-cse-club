@@ -174,7 +174,7 @@
           </div>
         </div>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p class="text-lg">&copy; 2024 University of Asia Pacific. All rights reserved. | Empowering Future Innovators</p>
+          <p class="text-lg">&copy; 2025 University of Asia Pacific. All rights reserved. | Empowering Future Innovators</p>
         </div>
       </div>
     </footer>

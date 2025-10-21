@@ -23,6 +23,7 @@ class UserProfileUpdateSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+
 class EmailFormatValidator:
     def __call__(self, value):
         pattern = r'^[a-zA-Z0-9._%+-]+@uap-bd\.edu$'
