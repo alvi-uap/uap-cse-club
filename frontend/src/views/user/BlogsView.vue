@@ -420,7 +420,7 @@ const creatingPost = ref(false);
 const sortBy = ref('name');
 const searchQuery = ref('');
 const showAddModal = ref(false);
-const selectedImage = ref(null); // For image preview modal update
+const selectedImage = ref(null); // For image preview modal
 const newPost = ref({
   name: '',
   description: '',
@@ -443,23 +443,23 @@ const clubs = computed(() => {
 // Helper function to get club name from post
 const getClubName = (post) => {
   if (!post.club) return null;
-  
+
   // If club is an object with name property
   if (typeof post.club === 'object' && post.club.name) {
     return post.club.name;
   }
-  
+
   // If club is just an ID, find the club in clubs list
   if (typeof post.club === 'number' || (typeof post.club === 'string' && post.club)) {
     const club = clubs.value.find(c => c.id === parseInt(post.club));
     return club ? club.name : null;
   }
-  
+
   // If using club_details from the updated serializer
   if (post.club_details && post.club_details.name) {
     return post.club_details.name;
   }
-  
+
   return null;
 };
 
@@ -515,497 +515,22 @@ const fetchClubs = async () => {
 
 const filteredPosts = computed(() => {
   let result = [...posts.value];
-  
+
   // Apply search filter
   if (searchQuery.value) {
     const query = searchQuery.value.toLowerCase();
-    result = result.filter(post => 
-      post.name.toLowerCase().includes(query) ||
-      (post.description && post.description.toLowerCase().includes(query)) ||
-      (getClubName(post) && getClubName(post).toLowerCase().includes(query))
-    );
-  }
-  
-  // Apply sorting
-  if (sortBy.value === 'name') {
-    result.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sortBy.value === 'newest') {
-    result.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
-  }
-  
-  return result;
-});
-
-// Component lifecycle
-onMounted(async () => {
-  await fetchPosts();
-  await fetchClubs();
-  document.addEventListener('keydown', handleKeydown);
-});
-
-onUnmounted(() => {
-  document.removeEventListener('keydown', handleKeydown);
-});
-
-const handleAddPost = async () => {
-  try {
-    creatingPost.value = true;
-    
-    const formData = new FormData();
-    formData.append('name', newPost.value.name);
-    formData.append('description', newPost.value.description);
-    
-    if (newPost.value.club) {
-      formData.append('club', newPost.value.club);
-    }
-    
-    if (newPost.value.image) {
-      formData.append('image', newPost.value.image);
-    }
-
-    await store.dispatch('post/createPost', formData);
-    
-    // Reset form and close modal
-    showAddModal.value = false;
-    newPost.value = {
-      name: '',
-      description: '',
-      club: '',
-      image: null
-    };
-    
-    // Refresh the posts list
-    await fetchPosts();
-  } catch (error) {
-    console.error('Error creating post:', error);
-  } finally {
-    creatingPost.value = false;
-  }
-};
-
-const resetFilters = () => {
-  searchQuery.value = '';
-  sortBy.value = 'name';
-};
-</script>
-
-<style scoped>
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-</style>
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-
-                class="h-5 w-5 mr-2"
-
-                viewBox="0 0 20 20"
-
-                fill="currentColor"
-
-              >
-
-                <path
-
-                  fill-rule="evenodd"
-
-                  d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-
-                  clip-rule="evenodd"
-
-                />
-
-              </svg>
-
-              Create New Post
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- Create Post Button -->
-
-
-    <div class="fixed bottom-8 right-8">
-
-      <button
-
-        @click="showAddModal = true"
-
-        class="inline-flex items-center p-4 border border-transparent rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
-
-      >
-
-        <svg
-
-          xmlns="http://www.w3.org/2000/svg"
-
-          class="h-6 w-6"
-
-          viewBox="0 0 20 20"
-
-          fill="currentColor"
-
-        >
-
-
-          <path
-
-            fill-rule="evenodd"
-
-            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-
-            clip-rule="evenodd"
-
-          />
-
-        </svg>
-
-      </button>
-
-    </div>
-
-
-
-    <!-- Add Post Modal -->
-
-    <div
-
-      v-if="showAddModal"
-
-      class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50"
-
-    >
-
-      <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
-
-        <div class="flex justify-between items-center mb-4">
-
-          <h3 class="text-lg font-medium text-gray-900">Create New Post</h3>
-
-          <button
-
-            >
-
-              <path
-
-                stroke-linejoin="round"
-
-                stroke-width="2"
-
-                <option value="">No Club</option>
-
-                <option
-                stroke-linejoin="round"
-
-                stroke-width="2"
-
-                <option value="">No Club</option>
-
-                <option
-                stroke-linecap="round"
-
-                stroke-linejoin="round"
-
-                stroke-width="2"
-
-                <option value="">No Club</option>
-
-                <option
-                  v-for="club in clubs"
-                  :key="club.id"
-
-
-                d="M6 18L18 6M6 6l12 12"
-
-              />
-
-            </svg>
-
-          </button>
-
-        </div>
-
-        <form @submit.prevent="handleAddPost">
-
-          <div class="space-y-4">
-
-            <div>
-
-              <label for="name" class="block text-sm font-medium text-gray-700">Post Name</label>
-
-              <input
-
-                id="name"
-                v-model="newPost.name"
-
-                type="text
-
-
-                <option value="">No Club</option>
-
-                <option
-                  v-for="club in clubs"
-                  :key="club.id"
-"
-                required
-
-                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-
-              />
-
-            </div>
-
-            <div>
-
-              <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-
-              <textarea
-
-                id="description"
-
-                v-model="newPost.description"
-
-                rows="3"
-
-                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-
-              ></textarea>
-
-                   <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-
-              <textarea
-
-                id="description"
-
-                v-model="newPost.description"
-
-                rows="3"
-
-                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-
-              ></textarea>
-
-
-            </div>
-
-            <div>
-
-              <label for="club" class="block text-sm font-medium text-gray-700">Club (Optional)</label>
-
-              <select
-
-                id="club"
-
-                v-model="newPost.club"
-
-                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-
-              >
-                   <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-
-              <textarea
-
-                id="description"
-
-                v-model="newPost.description"
-
-                rows="3"
-
-                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-
-              ></textarea>
-
-                <option value="">No Club</option>
-
-                <option
-                  v-for="club in clubs"
-                  :key="club.id"
-
-
-                  :value="club.id"
-
-                >
-
-                  {{ club.name }}
-
-                </option>
-
-              </select>
-
-            </div>
-
-            <div>
-
-              <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
-              <input
-
-                id="image"
-
-                type="file"
-
-                @change="handleImageUpload"
-
-                class="mt-1 block w-full text-sm text-gray-500
-
-                  file:mr-4 file:py-2 file:px-4
-
-
-// Image preview functionality
-const openImagePreview = (imageUrl) => {
-
-  selectedImage.value = imageUrl;
-
-
-                  file:rounded-md file:border-0
-
-                  file:text-sm file:font-semibold
-
-                  file:bg-purple-50 file:text-purple-700
-
-                  hover:file:bg-purple-100"
-
-              />
-
-              <p class="mt-1 text-xs text-gray-500">Upload an image for this post</p>
-
-
-
-};
-
-
-
-// Image preview functionality
-const openImagePreview = (imageUrl) => {
-
-  selectedImage.value = imageUrl;
-
-};
-
-
-
-// Keyboard event handler for ESC key
-
-const handleKeydown = (event) => {
-
-  if (event.key === 'Escape' && selectedImage.value) {
-
-    selectedImage.value = null;
-
-  }
-
-};
-
-
-
-// Data fetching
-
-const fetchPosts = async () => {
-
-
-
-
-  try {
-    loading.value = true;
-
-    await store.dispatch('post/fetchPosts');
-
-  } catch (error) {
-
-    console.error('Error fetching posts:', error);
-
-  } finally {
-
-
-    loading.value = false;
-  }
-
-};
-
-
-
-
-const fetchClubs = async () => {
-
-  try {
-
-
-    await store.dispatch('club/fetchClubs');
-
-  } catch (error) {
-
-    console.error('Error fetching clubs:', error);
-
-  }
-
-};
-
-
-const filteredPosts = computed(() => {
-
-  let result = [...posts.value];
-
-
-
-  // Apply search filter
-
-  if (searchQuery.value) {
-
-    const query = searchQuery.value.toLowerCase();
-
-
     result = result.filter(post =>
-
       post.name.toLowerCase().includes(query) ||
-
       (post.description && post.description.toLowerCase().includes(query)) ||
       (getClubName(post) && getClubName(post).toLowerCase().includes(query))
-
-
     );
   }
 
-
-
   // Apply sorting
-
   if (sortBy.value === 'name') {
-
-
     result.sort((a, b) => a.name.localeCompare(b.name));
-
   } else if (sortBy.value === 'newest') {
-
     result.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
-
   }
 
   return result;
@@ -1072,5 +597,3 @@ const resetFilters = () => {
   overflow: hidden;
 }
 </style>
-=======
->>>>>>> d0fe8742742fab17fe05d5ae212250a3bdff6c6b
