@@ -300,12 +300,12 @@
 
           <div class="bg-white rounded-2xl p-6 shadow-lg">
             <h3 class="text-xl font-semibold text-gray-900 mb-3">What are the application deadlines?</h3>
-            <p class="text-gray-600">For Fall 2024, the priority deadline is January 15th and the regular decision deadline is March 1st. Early decision applications are due November 1st.</p>
+            <p class="text-gray-600">For Fall 2025, the priority deadline is December 15th and the regular decision deadline is May 1st. Early decision applications are due November 1st.</p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 shadow-lg">
             <h3 class="text-xl font-semibold text-gray-900 mb-3">Do you offer campus tours?</h3>
-            <p class="text-gray-600">Yes! We offer guided campus tours Monday through Saturday. You can schedule a tour online or by calling our admissions office. Virtual tours are also available.</p>
+            <p class="text-gray-600">Yes! We offer guided campus tours Sunday through Saturday. You can schedule a tour online or by calling our admissions office. Virtual tours are also available.</p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 shadow-lg">
@@ -316,7 +316,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+
 
   </div>
 </template>
