@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100">
 
@@ -14,7 +12,7 @@
       </div>
     </section>
 
-     <!-- Contact Cards -->
+    <!-- Contact Cards -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8">
@@ -27,8 +25,8 @@
             </div>
             <h3 class="text-xl font-semibold text-gray-900 mb-4">Call Us</h3>
             <p class="text-gray-600 mb-4">Speak directly with our admission counselors</p>
-            <div class="text-lg font-semibold text-purple-600">+8801768544208</div>
-            <div class="text-sm text-gray-500 mt-2">Sun-sat, 9AM-5PM EST</div>
+            <div class="text-lg font-semibold text-purple-600">(555) 123-4567</div>
+            <div class="text-sm text-gray-500 mt-2">Mon-Fri, 9AM-5PM EST</div>
           </div>
 
           <!-- Email -->
@@ -40,7 +38,7 @@
             </div>
             <h3 class="text-xl font-semibold text-gray-900 mb-4">Email Us</h3>
             <p class="text-gray-600 mb-4">Send us your questions and we'll respond quickly</p>
-            <div class="text-lg font-semibold text-purple-600">admission@uap-bd.edu</div>
+            <div class="text-lg font-semibold text-purple-600">admissions@university.edu</div>
             <div class="text-sm text-gray-500 mt-2">Response within 24 hours</div>
           </div>
 
@@ -60,8 +58,6 @@
         </div>
       </div>
     </section>
-
-
 
     <!-- Contact Form & Info -->
     <section class="py-20 bg-gray-50">
@@ -384,6 +380,6 @@
 </script>
 
 <style scoped>
-/* Additional custom styles can be added here if needed */
 </style>
->>>>>>> af0461301a48ce39dbbd661ea7a791bd5fb45630
+
+
