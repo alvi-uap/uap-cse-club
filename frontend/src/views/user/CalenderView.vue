@@ -593,19 +593,19 @@ const currentPeriodDisplay = computed(() => {
 const calendarDays = computed(() => {
   const year = currentDate.value.getFullYear()
   const month = currentDate.value.getMonth()
-  
+
   const firstDay = new Date(year, month, 1)
   const lastDay = new Date(year, month + 1, 0)
-  
+
   const startDate = new Date(firstDay)
   startDate.setDate(startDate.getDate() - startDate.getDay())
-  
+
   const endDate = new Date(lastDay)
   endDate.setDate(endDate.getDate() + (6 - endDate.getDay()))
-  
+
   const days = []
   const current = new Date(startDate)
-  
+
   while (current <= endDate) {
     days.push({
       date: new Date(current),
@@ -614,14 +614,14 @@ const calendarDays = computed(() => {
     })
     current.setDate(current.getDate() + 1)
   }
-  
+
   return days
 })
 
 const currentWeek = computed(() => {
   const start = new Date(currentDate.value)
   start.setDate(start.getDate() - start.getDay())
-  
+
   return Array.from({ length: 7 }, (_, i) => {
     const date = new Date(start)
     date.setDate(date.getDate() + i)
@@ -642,7 +642,7 @@ const eventsThisMonth = computed(() => {
   const current = new Date(currentDate.value)
   const monthStart = new Date(current.getFullYear(), current.getMonth(), 1)
   const monthEnd = new Date(current.getFullYear(), current.getMonth() + 1, 0)
-  
+
   return events.value.filter(event => {
     const eventDate = new Date(event.startTime)
     return eventDate >= monthStart && eventDate <= monthEnd
@@ -722,7 +722,7 @@ const formatDate = (date, format = 'MMM d') => {
   if (format === 'EEE') return d.toLocaleDateString('en-US', { weekday: 'short' })
   if (format === 'MMM') return d.toLocaleDateString('en-US', { month: 'short' })
   if (format === 'd') return d.getDate().toString()
-  if (format === 'EEEE, MMMM d, yyyy') 
+  if (format === 'EEEE, MMMM d, yyyy')
     return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
 }
@@ -764,10 +764,10 @@ const saveEvent = () => {
     type: newEvent.value.type,
     description: newEvent.value.description
   }
-  
+
   events.value.push(newEventData)
   showAddEventModal.value = false
-  
+
   // Reset form
   newEvent.value = {
     title: '',
@@ -791,29 +791,3 @@ const registerForEvent = (event) => {
   opacity: 1;
 }
 </style>
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style scoped>
-/* Custom styles for calendar */
-.hover\:opacity-100:hover {
-  opacity: 1;
-}
-</style>
->>>>>>>
