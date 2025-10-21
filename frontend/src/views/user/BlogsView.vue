@@ -713,32 +713,36 @@ const resetFilters = () => {
 
           <button
 
-            @click="showAddModal = false"
-
-            class="text-gray-400 hover:text-gray-500"
-
-          >
-
-            <svg
-
-              xmlns="http://www.w3.org/2000/svg"
-
-              class="h-6 w-6"
-              fill="none"
-
-              viewBox="0 0 24 24"
-
-              stroke="currentColor"
-
             >
 
               <path
 
+                stroke-linejoin="round"
+
+                stroke-width="2"
+
+                <option value="">No Club</option>
+
+                <option
+                stroke-linejoin="round"
+
+                stroke-width="2"
+
+                <option value="">No Club</option>
+
+                <option
                 stroke-linecap="round"
 
                 stroke-linejoin="round"
 
                 stroke-width="2"
+
+                <option value="">No Club</option>
+
+                <option
+                  v-for="club in clubs"
+                  :key="club.id"
+
 
                 d="M6 18L18 6M6 6l12 12"
 
@@ -763,7 +767,15 @@ const resetFilters = () => {
                 id="name"
                 v-model="newPost.name"
 
-                type="text"
+                type="text
+
+
+                <option value="">No Club</option>
+
+                <option
+                  v-for="club in clubs"
+                  :key="club.id"
+"
                 required
 
                 class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
@@ -838,6 +850,11 @@ const resetFilters = () => {
 
                   file:mr-4 file:py-2 file:px-4
 
+
+// Image preview functionality
+const openImagePreview = (imageUrl) => {
+
+  selectedImage.value = imageUrl;
 
 
                   file:rounded-md file:border-0
