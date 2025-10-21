@@ -137,14 +137,14 @@
             </form>
           </div>
 
-          <!-- Contact Information -->
+   <!-- Contact Information -->
           <div class="space-y-8">
             <!-- Office Hours -->
             <div class="bg-white rounded-2xl shadow-lg p-8">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Office Hours</h3>
               <div class="space-y-4">
                 <div class="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span class="text-gray-700">Monday - Friday</span>
+                  <span class="text-gray-700">Sunday - Thursday</span>
                   <span class="font-semibold text-gray-900">9:00 AM - 5:00 PM</span>
                 </div>
                 <div class="flex justify-between items-center py-3 border-b border-gray-100">
@@ -152,12 +152,11 @@
                   <span class="font-semibold text-gray-900">10:00 AM - 2:00 PM</span>
                 </div>
                 <div class="flex justify-between items-center py-3">
-                  <span class="text-gray-700">Sunday</span>
+                  <span class="text-gray-700">Friday</span>
                   <span class="font-semibold text-gray-900">Closed</span>
                 </div>
               </div>
             </div>
-
             <!-- Campus Location -->
           <div class="bg-white rounded-2xl shadow-lg p-8">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Visit Our Campus</h3>
