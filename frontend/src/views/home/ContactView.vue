@@ -180,10 +180,10 @@
             </div>
 
             <!-- Emergency Contact -->
-            <div class="bg-red-50 border border-red-200 rounded-2xl p-8">
+          <div class="bg-red-50 border border-red-200 rounded-2xl p-8">
               <h3 class="text-xl font-bold text-red-900 mb-4">Emergency Contact</h3>
               <p class="text-red-700 mb-4">For urgent matters outside office hours</p>
-              <div class="text-lg font-semibold text-red-800">(555) 911-HELP</div>
+              <div class="text-lg font-semibold text-red-800">+8802-41010625</div>
               <p class="text-sm text-red-600 mt-2">Available 24/7 for emergencies</p>
             </div>
           </div>
