@@ -989,12 +989,3 @@ const resetFilters = () => {
           @click.stop
 
         />
-
-
-
-
-
-
-
-        <!-- Download Button -->
-
