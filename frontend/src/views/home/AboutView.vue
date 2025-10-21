@@ -93,8 +93,16 @@
       <section class="mb-16">
         <h2 class="text-3xl font-black text-gray-900 mb-12 text-center">Campus Facilities</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-purple-50 hover:shadow-xl transition-all duration-300 group">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-black text-gray-900 mb-3">Advanced Labs</h3>
+            <p class="text-gray-600">State-of-the-art computer labs with latest technology and software</p>
+          </div>
 
-          
           <div class="bg-white rounded-xl p-6 shadow-lg border border-purple-50 hover:shadow-xl transition-all duration-300 group">
             <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
               <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,8 +113,7 @@
             <p class="text-gray-600">Extensive collection of books, journals, and online resources</p>
           </div>
 
-
-           <div class="bg-white rounded-xl p-6 shadow-lg border border-purple-50 hover:shadow-xl transition-all duration-300 group">
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-purple-50 hover:shadow-xl transition-all duration-300 group">
             <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
               <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
@@ -114,17 +121,6 @@
             </div>
             <h3 class="text-xl font-black text-gray-900 mb-3">Innovation Hub</h3>
             <p class="text-gray-600">Collaborative spaces for research and startup incubation</p>
-          </div>
-
-
-          <div class="bg-white rounded-xl p-6 shadow-lg border border-purple-50 hover:shadow-xl transition-all duration-300 group">
-            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
-              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-black text-gray-900 mb-3">Advanced Labs</h3>
-            <p class="text-gray-600">State-of-the-art computer labs with latest technology and software</p>
           </div>
         </div>
       </section>
