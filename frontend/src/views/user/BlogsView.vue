@@ -800,6 +800,21 @@ const resetFilters = () => {
 
               ></textarea>
 
+                   <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+
+              <textarea
+
+                id="description"
+
+                v-model="newPost.description"
+
+                rows="3"
+
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+
+              ></textarea>
+
+
             </div>
 
             <div>
@@ -815,6 +830,19 @@ const resetFilters = () => {
                 class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
 
               >
+                   <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+
+              <textarea
+
+                id="description"
+
+                v-model="newPost.description"
+
+                rows="3"
+
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+
+              ></textarea>
 
                 <option value="">No Club</option>
 
